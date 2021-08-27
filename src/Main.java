@@ -1,19 +1,18 @@
 public class Main {
     public static void main(String[] args) {
 
-        int account = 1500;
+        int account = 1000;
         int replenish = 2000;
-        boolean bonus = true;
+        int bonus;
 
-        int present;
-        if (bonus) {
-            present = replenish / 1000;
+        if (replenish >= 1000) {
+            bonus = replenish / 1000;
         } else {
-            present = 0;
+            bonus = 0;
         }
-        int result = account + replenish + present;
+        int result = account + replenish + bonus;
         System.out.println("Баланс: " + result);
-        System.out.println("Бонус: " + present);
+        System.out.println("Бонус: " + bonus);
 
     }
 }
